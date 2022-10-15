@@ -1,27 +1,24 @@
 package zadanie1;
 
 
-public class koktailTruskawkowy extends Koktajl implements Smakowalne {
+public class koktailTruskawkowy extends KoktajlSmakowy{
 
     private final RodzajTruskawki rodzajTruskawki;
 
-    private final RodzajSmaku rodzajSmaku;
+
 
     public koktailTruskawkowy(
             final int kcal,
             final RodzajTruskawki rodzajTruskawki,
             final RodzajSmaku rodzajSmaku
             ){
-        super(kcal);
+        super(kcal, rodzajSmaku);
         this.rodzajTruskawki = rodzajTruskawki;
-        this.rodzajSmaku = rodzajSmaku;
+
         //RodzajTruskawki.ANANASOWA.cecha();
     }
 
-    @Override
-    public RodzajSmaku smak() {
-        return rodzajSmaku;
-    }
+
 
     @Override
     public void pij() {
