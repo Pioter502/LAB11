@@ -5,7 +5,7 @@ public abstract class Koktajl implements Jadalne, Pijalne{
 
     protected final int kcal;
 
-    protected Koktajl(){
+    protected Koktajl(int kcal){
         this.kcal = kcal;
     }
 

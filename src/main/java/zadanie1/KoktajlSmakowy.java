@@ -2,13 +2,13 @@ package zadanie1;
 
 
 
-public class KoktajlSmakowy extends Koktajl implements Smakowalne{
+public abstract class KoktajlSmakowy extends Koktajl implements Smakowalne{
 
 
-    private final RodzajSmaku rodzajSmaku;
+    protected final RodzajSmaku rodzajSmaku;
 
-    public KoktajlSmakowy(int kcal, RodzajSmaku rodzajSmaku) {
-        super();
+    protected KoktajlSmakowy(int kcal, RodzajSmaku rodzajSmaku) {
+        super(kcal);
         this.rodzajSmaku = rodzajSmaku;
     }
 
