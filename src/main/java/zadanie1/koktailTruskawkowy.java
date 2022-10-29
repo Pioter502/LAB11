@@ -1,30 +1,34 @@
 package zadanie1;
-
-
-public class koktailTruskawkowy extends KoktajlSmakowy{
-
+public class koktailTruskawkowy extends KoktajlSmakowy {
     private final RodzajTruskawki rodzajTruskawki;
-
-
 
     public koktailTruskawkowy(
             final int kcal,
-            final RodzajTruskawki rodzajTruskawki,
-            final RodzajSmaku rodzajSmaku
-            ){
-        super(kcal, rodzajSmaku);
+            final RodzajTruskawki rodzajTruskawki, ZrodloSmaku owocowy) {
+        super(kcal, RodzajSmaku.TRUSKAWKOWY);
         this.rodzajTruskawki = rodzajTruskawki;
-
-        //RodzajTruskawki.ANANASOWA.cecha();
     }
-
-
 
     @Override
     public void pij() {
-        System.out.println("Pijalne koktajl " + smak());
+        // Zadanie:
+        // Przy użyciu switch statement oraz switch expression (jedna metoda zakomentowana)
+        // do sformatowanej wiadomości dodaj
+        // na podstawie rodzaju smaku informację o tym czy smak jest: OWOCOWY, WARZYWNY czy INNY
+        // informacja ta powinna pochodzić z nowej metody zrodloSmaku,
+        // która zwraca nowy enum ZrodloSmaku. Metoda ta powinna zostać umieszczona w klasie KoktajlSmakowy
+        System.out.println("Pije koktajl o smaku " +
+                smak() + ", która cechuje się " + rodzajTruskawki.cecha()
+        );
+        String message = String.format(
+                "Pije koktajl %s, %s",
+                rodzajSmaku,
+                rodzajTruskawki
 
-        String message = String.format("o cechach " + rodzajTruskawki.cecha() + " i słodkosci " + rodzajSmaku.slodkosc() + " o smaku: " + smak());
+
+        );
         System.out.println(message);
     }
+
+
 }
