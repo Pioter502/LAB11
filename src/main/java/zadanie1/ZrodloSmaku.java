@@ -4,22 +4,18 @@ public enum ZrodloSmaku {
 
     OWOCOWY("owocowy"),
     WARZYWNY("warzywny"),
-    INNY("inszy");
+    INNY("inszy"),;
 
-    private final String nazwa;
+    private String nazwa;
 
 
     ZrodloSmaku(final String nazwa) {
         this.nazwa = nazwa;
     }
 
-    public String nazwa() {
-        return nazwa;
-    }
-
     @Override
     public String toString() {
         return "ZrodloSmaku{" +
-                "smak='" + nazwa;
+                "smak='" + nazwa + '\'' + '}';
     }
 }

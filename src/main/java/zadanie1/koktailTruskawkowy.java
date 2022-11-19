@@ -4,7 +4,7 @@ public class koktailTruskawkowy extends KoktajlSmakowy {
 
     public koktailTruskawkowy(
             final int kcal,
-            final RodzajTruskawki rodzajTruskawki, ZrodloSmaku owocowy) {
+            final RodzajTruskawki rodzajTruskawki) {
         super(kcal, RodzajSmaku.TRUSKAWKOWY);
         this.rodzajTruskawki = rodzajTruskawki;
     }
@@ -21,9 +21,10 @@ public class koktailTruskawkowy extends KoktajlSmakowy {
                 smak() + ", która cechuje się " + rodzajTruskawki.cecha()
         );
         String message = String.format(
-                "Pije koktajl %s, %s",
+                "Pije koktajl %s, %s, %s",
                 rodzajSmaku,
-                rodzajTruskawki
+                rodzajTruskawki,
+                zrodloSmaku()
 
 
         );
